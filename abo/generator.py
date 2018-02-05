@@ -89,7 +89,7 @@ class ABO:
         if len(str(total_amount)) > 15:
             raise ValueError('Total amount too high for use in ABO format')
 
-        return '2 {prefix:0>6}-{account:0>10} {total_amount:015d} {due_date}\r\n'.format(
+        return '2 {prefix:0>6}-{account:0>10} {total_amount} {due_date}\r\n'.format(
             prefix=self._account_number['prefix'],
             account=self._account_number['number'],
             total_amount=total_amount,

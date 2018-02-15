@@ -11,7 +11,7 @@ class ABOTransaction:
         return self._amount
 
     def render(self):
-        return '{prefix:0>6}-{account:0>10} {amount:015d} {variable_symbol:010d} {bank:0>4}{constant_symbol:04d} {specific_symbol:010d} AV:{message}\r\n'.format(
+        return '{prefix:0>6}-{account:0>10} {amount} {variable_symbol:010d} {bank:0>4}{constant_symbol:04d} {specific_symbol:010d} AV:{message}\r\n'.format(
             prefix=self._account_number['prefix'],
             account=self._account_number['number'],
             amount=self._amount,
